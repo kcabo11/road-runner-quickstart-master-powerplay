@@ -213,10 +213,12 @@ public class RedTerminalShort extends LinearOpMode {
 
         if (tagOfInterest == null || tagOfInterest.id == LEFT) {
             TrajectorySequence trajSeq = drive.trajectorySequenceBuilder(new Pose2d(-36.625, -62.375, Math.toRadians(90))) //34.25
-                    //.forward(22)
-                    .splineTo(new Vector2d(-31,-4.5), Math.toRadians(40), //-24-24
-                            SampleMecanumDrive.getVelocityConstraint(50, DriveConstants.MAX_ANG_VEL,DriveConstants.TRACK_WIDTH),
-                            SampleMecanumDrive.getAccelerationConstraint(DriveConstants.MAX_ACCEL))
+                    .forward(24,
+                            SampleMecanumDrive.getVelocityConstraint(30, DriveConstants.MAX_ANG_VEL,DriveConstants.TRACK_WIDTH),
+                            SampleMecanumDrive.getAccelerationConstraint(30))
+                    .splineTo(new Vector2d(-32.5,-5), Math.toRadians(10), //-24-24
+                            SampleMecanumDrive.getVelocityConstraint(30, DriveConstants.MAX_ANG_VEL,DriveConstants.TRACK_WIDTH),
+                            SampleMecanumDrive.getAccelerationConstraint(30))
                     .waitSeconds(4)
                     .back(5)
 
@@ -244,7 +246,7 @@ public class RedTerminalShort extends LinearOpMode {
                         drive.liftMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
                         drive.liftMotor.setPower(-1);
                     })
-                    .addTemporalMarker(6,() -> {
+                    .addTemporalMarker(8,() -> {
                         //drop lift
                         drive.liftMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
                         drive.liftMotor.setPower(.1);
@@ -255,10 +257,12 @@ public class RedTerminalShort extends LinearOpMode {
         }
         else if(tagOfInterest.id == MIDDLE) {
             TrajectorySequence trajSeq = drive.trajectorySequenceBuilder(new Pose2d(-36.625, -62.375, Math.toRadians(90))) //34.25
-                    //.forward(22)
-                    .splineTo(new Vector2d(-31,-4.5), Math.toRadians(40), //-24-24
-                            SampleMecanumDrive.getVelocityConstraint(50, DriveConstants.MAX_ANG_VEL,DriveConstants.TRACK_WIDTH),
-                            SampleMecanumDrive.getAccelerationConstraint(DriveConstants.MAX_ACCEL))
+                    .forward(24,
+                            SampleMecanumDrive.getVelocityConstraint(30, DriveConstants.MAX_ANG_VEL,DriveConstants.TRACK_WIDTH),
+                            SampleMecanumDrive.getAccelerationConstraint(30))
+                    .splineTo(new Vector2d(-32.5,-5), Math.toRadians(10), //-24-24
+                            SampleMecanumDrive.getVelocityConstraint(30, DriveConstants.MAX_ANG_VEL,DriveConstants.TRACK_WIDTH),
+                            SampleMecanumDrive.getAccelerationConstraint(30))
                     .waitSeconds(4)
                     .back(5)
 
@@ -294,10 +298,12 @@ public class RedTerminalShort extends LinearOpMode {
         }
         else {//right {
             TrajectorySequence trajSeq = drive.trajectorySequenceBuilder(new Pose2d(-36.625, -62.375, Math.toRadians(90))) //34.25
-                    //.forward(22)
-                    .splineTo(new Vector2d(-31,-4.5), Math.toRadians(40), //-24-24
-                            SampleMecanumDrive.getVelocityConstraint(50, DriveConstants.MAX_ANG_VEL,DriveConstants.TRACK_WIDTH),
-                            SampleMecanumDrive.getAccelerationConstraint(DriveConstants.MAX_ACCEL))
+                    .forward(24,
+                            SampleMecanumDrive.getVelocityConstraint(30, DriveConstants.MAX_ANG_VEL,DriveConstants.TRACK_WIDTH),
+                            SampleMecanumDrive.getAccelerationConstraint(30))
+                    .splineTo(new Vector2d(-32.5,-5), Math.toRadians(10), //-24-24
+                            SampleMecanumDrive.getVelocityConstraint(30, DriveConstants.MAX_ANG_VEL,DriveConstants.TRACK_WIDTH),
+                            SampleMecanumDrive.getAccelerationConstraint(30))
                     .waitSeconds(4)
                     .back(5)
 
